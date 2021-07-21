@@ -2,6 +2,7 @@ import React from 'react';
 import Clock from '../Clock'; 
 import Weather from '../Weather'
 import Calendar from '../Calendar'
+import Spotify from '../Spotify'
 
 const stylesheet = {
     div : {
@@ -10,6 +11,11 @@ const stylesheet = {
     },
     font : {
         fontFamily: 'Oswald',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        height: '100vh'
+
     }
 }
 const MainPage = ()=> {
@@ -21,7 +27,9 @@ const MainPage = ()=> {
             <Clock/>
             </div> 
             <div style = {stylesheet.div}>
-                <div></div>
+                <div>
+                    <Spotify/>
+                    </div>
             <Calendar/>
             </div>
         </div>

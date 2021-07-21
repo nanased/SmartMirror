@@ -3,10 +3,11 @@ import React, {useState,useEffect} from 'react';
 
 const calendarStylesheet = {
     currentCalendar: {
-        fontSize: '17px',
-        marginTop: '5px',
-        marginBottom: '100px',
-        
+        fontSize: '20px',
+        marginTop: '20px',
+        marginBottom: '65px',
+        paddingRight: '50px',
+        textAlign: 'left',
     }
 }
 
@@ -38,7 +39,7 @@ const ISODateString =(d=new Date())=>{
         axios.get(`https://www.googleapis.com/calendar/v3/calendars/mahina.yasutake@gmail.com/events?orderBy=startTime&singleEvents=true&timeMin=${ISODateString()}&key=AIzaSyAI9g1RC42exw80NXVGjJPLeAzlb1RpKps&maxResults=5`)
         .then(function (response) {
             console.log(response);
-            setCurrentCalendar(response.data.items.map(n => <div><div>{n.summary}</div><div>{n.start.dateTime}</div></div>))
+            setCurrentCalendar(response.data.items.map(n => <div><div>- {n.summary}</div></div>))
         })
         .catch(function (error) {
           // handle error
@@ -52,7 +53,7 @@ const ISODateString =(d=new Date())=>{
     
     return (
     <div>
-        <h1>Calendar</h1>
+        <h1 style={calendarStylesheet}>Events</h1>
         <p style= {calendarStylesheet.currentCalendar}>{currentCalendar}</p>
     </div>
     )

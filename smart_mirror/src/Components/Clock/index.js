@@ -1,14 +1,14 @@
 import React, {useState,useEffect} from 'react'; 
 const clockStylesheet = {
     time : {
-        fontSize: '60px',
+        fontSize: '70px',
         paddingRight: '20px',
         marginTop: '0px',
         marginBottom: '0px',
         margin: '10px',
     },
     date : {
-        fontSize: '25px',
+        fontSize: '30px',
         textAlign: 'right',
         paddingRight: '30px',
         marginTop: '0px',

@@ -4,21 +4,21 @@ import React, {useState,useEffect} from 'react';
 const weatherStylesheet = {
     celcius: {
         fontSize: '25px',
-        paddingLeft: '5px',
-        marginTop: '30px',
-        marginBottom: '0px',
+        paddingLeft: '30px',
+        marginTop: '20px',
+        marginBottom: '5px',
         textAlign: 'left',
     },
     fahrenheit: {
         fontSize: '25px',
-        paddingLeft: '5px',
+        paddingLeft: '30px',
         marginTop: '0px',
-        marginBottom: '0px',
+        marginBottom: '5px',
         textAlign: 'left',
     },
     description: {
         fontSize: '25px',
-        paddingLeft: '5px',
+        paddingLeft: '30px',
         marginTop: '0px',
         marginBottom: '0px',
         textAlign: 'left',
